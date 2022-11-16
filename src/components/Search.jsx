@@ -13,9 +13,8 @@ const handleSearch = (e) => {
   return (
     <div>
       <>
-        <Divider>Search</Divider>
+        <Divider>Search a Food</Divider>
 
-        <label>Search</label>
         <Input value={search} type="text" onChange={handleSearch} />
       </>
     </div>

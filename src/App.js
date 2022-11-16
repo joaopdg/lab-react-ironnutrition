@@ -35,17 +35,26 @@ function App() {
   return (
     <div className="App">
       <div className="appBody">
-        <Button onClick={() => setShow(!show)}>{show ? 'Hide Form' : 'Add New Food'}</Button>
-        {show && <AddFoodForm addDish={addDish} />}
+
+      <Divider/>
+        <h1>IRON NUTRITION</h1>
 
         <Search foodSearch={foodSearch} />
 
         <Divider>Food List</Divider>
 
+
+
+ 
+
         <Row style={{ width: '100%', justifyContent: 'center' }}>
           {dishes && <FoodBox dishes={searchDish} deleteDish={deleteDish}/>}
           {dishes.length === 0 && <img src='https://i.ibb.co/pz4149B/noFood.png' alt="noFood" /> }
         </Row>
+        <Divider/>
+        <Button onClick={() => setShow(!show)}>{show ? 'Hide Form' : 'Add New Food'}</Button>
+        {show && <AddFoodForm addDish={addDish} />}
+        <Divider/>
       </div>
     </div>
   );

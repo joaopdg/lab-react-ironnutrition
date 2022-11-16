@@ -2,6 +2,7 @@
   text-align: center;
   display: flex;
   justify-content: space-around;
+  background-color: lightgray;
 }
 
 .appBody{
@@ -11,6 +12,11 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.ant-row{
+  display: flex;
+  justify-content: center;
 }
 
 @media (prefers-reduced-motion: no-preference) {

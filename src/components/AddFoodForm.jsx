@@ -27,7 +27,7 @@ const handleSubmit = (e) => {
   return (
     <div>
       <form onSubmit={handleSubmit} >
-        <Divider>Add Food Entry</Divider>
+        <Divider>Add New Food</Divider>
 
         <label>Name</label>
         <Input value={name} type="text" onChange={handleName} />
@@ -40,8 +40,11 @@ const handleSubmit = (e) => {
 
         <label>Servings</label>
         <Input value={servings} type="number" onChange={handleServings} />
+<br />
+<br />
+        <button type="submit">Add Food</button>
 
-        <button type="submit">Create</button>
+    
       </form>
     </div>
   );
