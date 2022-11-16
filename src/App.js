@@ -48,8 +48,10 @@ function App() {
  
 
         <Row style={{ width: '100%', justifyContent: 'center' }}>
+        <div className='notFound'>
           {dishes && <FoodBox dishes={searchDish} deleteDish={deleteDish}/>}
           {dishes.length === 0 && <img src='https://i.ibb.co/pz4149B/noFood.png' alt="noFood" /> }
+          </div>
         </Row>
         <Divider/>
         <Button onClick={() => setShow(!show)}>{show ? 'Hide Form' : 'Add New Food'}</Button>
