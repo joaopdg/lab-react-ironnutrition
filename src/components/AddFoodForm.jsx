@@ -42,7 +42,7 @@ const handleSubmit = (e) => {
         <Input value={servings} type="number" onChange={handleServings} />
 <br />
 <br />
-        <button type="submit">Add Food</button>
+        <button className='submitBtn' type="submit">Add Food</button>
 
     
       </form>

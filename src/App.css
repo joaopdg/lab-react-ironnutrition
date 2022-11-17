@@ -43,6 +43,22 @@
   border-radius: 15px;
 }
 
+.submitBtn {
+  border-radius: 10px;
+  background-color: #1890ff;
+  color: white;
+  border: none;
+  padding: 6px 15px;
+}
+
+.submitBtn:hover {
+  border-radius: 10px;
+  background-color: white;
+  color: #1890ff;
+  border: 1px solid #1890ff;
+  padding: 6px 15px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

@@ -14,7 +14,7 @@ function App() {
   const addDish = (newDish) => {
     const updateDishes = [newDish, ...dishes];
     setDishes(updateDishes);
-    setSearchDish(updateDishes)
+    setSearchDish(updateDishes);
   };
 
   const foodSearch = (search) => {
@@ -26,37 +26,36 @@ function App() {
 
   const deleteDish = (dishName) => {
     const updateDishes = dishes.filter((dish) => {
-      return dish.name !== dishName
-    })
-    setDishes(updateDishes)
-    setSearchDish(updateDishes)
-  }
+      return dish.name !== dishName;
+    });
+    setDishes(updateDishes);
+    setSearchDish(updateDishes);
+  };
 
   return (
     <div className="App">
       <div className="appBody">
-
-      <Divider/>
+        <Divider />
         <h1>IRON NUTRITION</h1>
 
         <Search foodSearch={foodSearch} />
 
         <Divider>Food List</Divider>
 
-
-
- 
-
         <Row style={{ width: '100%', justifyContent: 'center' }}>
-        <div className='notFound'>
-          {dishes && <FoodBox dishes={searchDish} deleteDish={deleteDish}/>}
-          {dishes.length === 0 && <img src='https://i.ibb.co/pz4149B/noFood.png' alt="noFood" /> }
+          <div className="notFound">
+            {dishes && <FoodBox dishes={searchDish} deleteDish={deleteDish} />}
+            {dishes.length === 0 && (
+              <img src="https://i.ibb.co/pz4149B/noFood.png" alt="noFood" />
+            )}
           </div>
         </Row>
-        <Divider/>
-        <Button onClick={() => setShow(!show)}>{show ? 'Hide Form' : 'Add New Food'}</Button>
+        <Divider />
+        <Button onClick={() => setShow(!show)}>
+          {show ? 'Hide Form' : 'Add New Food'}
+        </Button>
         {show && <AddFoodForm addDish={addDish} />}
-        <Divider/>
+        <Divider />
       </div>
     </div>
   );
